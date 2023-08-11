@@ -1,4 +1,7 @@
-import sys
+print('='*50)
+print(' ')
+print('  Olá, Seja bem vindo ao CriptoMessage , Use o para criptografar suas mensagens  ')
+print(' ')
 
 def cripto(frase):
     tradutor = ""
@@ -59,5 +62,8 @@ def cripto(frase):
             tradutor = tradutor + letra
     return tradutor
 
-print(cripto(input("Digite uma frase: ")))
-
+result = cripto(input("Digite a frase a ser Criptografada: "))
+print('A frase se tornou: ' +  result )
+print(' ')
+print('='*50)
+print(input('Pressione Enter para sair...'))
