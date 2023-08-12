@@ -1,6 +1,7 @@
+
 print('='*50)
 print(' ')
-print('  Olá, Seja bem vindo ao CriptoMessage , Use o para criptografar suas mensagens  ')
+print('  Olá, Seja bem vindo ao CriptoMessage  \nUse o para criptografar suas mensagens  ')
 print(' ')
 
 def cripto(frase):
@@ -15,7 +16,7 @@ def cripto(frase):
         elif letra in "Dd":
             tradutor = tradutor + '%'
         elif letra in "Ee":
-            tradutor = tradutor + '¨'
+            tradutor = tradutor + '2'
         elif letra in "Ff":
             tradutor = tradutor + '&'
         elif letra in "Gg":
@@ -29,13 +30,13 @@ def cripto(frase):
         elif letra in "Kk":
             tradutor = tradutor + '='
         elif letra in "Ll":
-            tradutor = tradutor + '['
+            tradutor = tradutor + '4'
         elif letra in "Mm":
-            tradutor = tradutor + ']'
+            tradutor = tradutor + '6'
         elif letra in "Nn":
             tradutor = tradutor + '/'
         elif letra in "Oo":
-            tradutor = tradutor + ';'
+            tradutor = tradutor + '8'
         elif letra in "Pp":
             tradutor = tradutor + '!'
         elif letra in "Qq":
