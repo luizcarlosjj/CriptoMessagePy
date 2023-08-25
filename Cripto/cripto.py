@@ -1,4 +1,6 @@
+#IMPORTES
 import os
+import segno
 
 print('='*50)
 print(' ')
@@ -6,6 +8,8 @@ print(' Olá, Seja bem vindo ao CriptoMessage  \n Use o para criptografar suas m
 print(' ')
 
 fn = 'src/arquivo.txt'
+
+# EVENTOS
 
 if os.path.exists(fn):
     with open(fn) as file:
@@ -75,10 +79,12 @@ if not text:
                 else: 
                     tradutor = tradutor + letra
             return tradutor
-        result = cripto(input(" Digite a frase a ser Criptografada: "))
-        file.write(result)
+        #result = cripto(input(" Digite a frase a ser Criptografada: "))
+        fraseNormal = input('Digite a frase a ser Criptografada: ')
+        fraseMod = cripto(fraseNormal)
+        file.write(fraseMod)
         print(' ')
-        print(' A frase se tornou: ' +  result )
+        print(' A frase se tornou: ' +  fraseMod )
         print(' ')
         print('='*50)
         print(input('Pressione Enter para sair...'))
@@ -145,10 +151,17 @@ else:
                 else: 
                     tradutor = tradutor + letra
             return tradutor
-        result = cripto(input(" Digite a frase a ser Criptografada: "))
+        fraseNormal = input('Digite a frase a ser Criptografada: ')
+        fraseMod = cripto(fraseNormal)
+        file.write(fraseMod)
         print(' ')
-        print(' A frase se tornou: ' +  result )
+        print(' A frase se tornou: ' +  fraseMod )
         print(' ')
         print('='*50)
         print(input('Pressione Enter para sair...'))
-        file.write(result)
+
+        
+with open(fn, 'r') as file:
+    Qrcode = file.read()
+    qrcode_seq = segno.make_sequence(Qrcode, version=1)
+    qrcode_seq.save('Qrcode/{}.png' .format(fraseNormal), scale=10)

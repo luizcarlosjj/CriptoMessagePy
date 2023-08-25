@@ -1,7 +1,7 @@
 import segno
 import os
 
-arq = "./arquivo.txt"
+arq = "src/arquivo.txt"
 
 with open(arq, "r") as arquivo:
 	texto = arquivo.read()
