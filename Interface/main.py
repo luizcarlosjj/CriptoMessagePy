@@ -63,23 +63,23 @@ def cripto(frase):
     return tradutor
 
 def showText():
+    name = tela.lineEdit_2.text()
     textLine = cripto(tela.lineEdit.text())
-    tela.resultado.valueChanged.connect(textLine)
-    print(' A frase se tornou: ' +  textLine )
-
-def qrcode():
     QrcodeText = cripto(tela.lineEdit.text())
     qrcode_seq = segno.make_sequence(QrcodeText, version=1)
-    qrcode_seq.save('images/{}.png' .format(tela.lineEdit.text()), scale=10)
+    qrcode_seq.save('images/{}.png' .format(name), scale=6)
+    tela.resultado.setText(textLine)    
 
 def codeImage():
-    codeName = tela.lineEdit.text()
-    tela.frame1.show() 
+    ##arquivo = 'images/{}.png'.format(tela.lineEdit.text())
+    name = tela.lineEdit_2.text()
+    tela.label_3.setStyleSheet("background-image : url(images/{}.png);".format(name))
+
 
 app = QtWidgets.QApplication([])
 tela = uic.loadUi('tela01.ui')
 tela.criptoButton.clicked.connect(showText)
-tela.qrcodeButton.clicked.connect(qrcode)
+tela.qrcodeButton_2.clicked.connect(codeImage)
 
 tela.show()
 app.exec()

@@ -20,8 +20,8 @@
    <widget class="QPushButton" name="criptoButton">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>180</y>
+      <x>120</x>
+      <y>280</y>
       <width>301</width>
       <height>51</height>
      </rect>
@@ -47,9 +47,9 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>10</y>
-      <width>351</width>
+      <x>120</x>
+      <y>0</y>
+      <width>301</width>
       <height>71</height>
      </rect>
     </property>
@@ -78,8 +78,8 @@
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>130</y>
+      <x>120</x>
+      <y>230</y>
       <width>301</width>
       <height>41</height>
      </rect>
@@ -99,8 +99,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>90</y>
+      <x>120</x>
+      <y>190</y>
       <width>301</width>
       <height>31</height>
      </rect>
@@ -120,38 +120,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="qrcodeButton">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>280</y>
-      <width>301</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: #222; background-color: #d2d2d2</string>
-    </property>
-    <property name="text">
-     <string>Gerar QRCODE</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>40</width>
-      <height>40</height>
-     </size>
-    </property>
-   </widget>
    <widget class="QLabel" name="resultado">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>240</y>
+      <x>120</x>
+      <y>340</y>
       <width>301</width>
       <height>31</height>
      </rect>
@@ -162,10 +135,102 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #222; padding: 5px;</string>
+     <string notr="true">color: #fff; padding: 5px;</string>
     </property>
     <property name="text">
-     <string>Digite a frase a ser criptografada:</string>
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="qrcodeButton_2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>390</y>
+      <width>251</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #222; 
+background-color: rgb(215, 216, 255);</string>
+    </property>
+    <property name="text">
+     <string>Mostrar QRCODE</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>390</y>
+      <width>181</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>140</y>
+      <width>301</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff; padding: 5px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>100</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #222; background-color: #d2d2d2; text-align: 'center';</string>
+    </property>
+    <property name="text">
+     <string>Digite Seu Nome:</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

@@ -36,13 +36,13 @@ def descripto(frase):
             tradutor = tradutor + 'N'
         elif letra in "8":
             tradutor = tradutor + 'O'
-        elif letra in "!":
+        elif letra in "{":
             tradutor = tradutor + 'P'
-        elif letra in "?":
+        elif letra in "|":
             tradutor = tradutor + 'Q'
-        elif letra in "^":
+        elif letra in "}":
             tradutor = tradutor + 'R'
-        elif letra in "~":
+        elif letra in ";":
             tradutor = tradutor + 'S'
         elif letra in "<":
             tradutor = tradutor + 'T'

@@ -1,10 +1,10 @@
 #IMPORTES
 import os
 import segno
+from rich import print
 
-print('='*50)
-print(' ')
-print(' Olá, Seja bem vindo ao CriptoMessage  \n Use o para criptografar suas mensagens  ')
+print('='*40)
+print(f'[on red] Olá, Seja bem vindo ao CriptoMessage [/]{os.linesep}[on red] Use o para criptografar suas mensagens [/]')
 print(' ')
 
 fn = 'src/arquivo.txt'
@@ -53,13 +53,13 @@ if not text:
                 elif letra in "Oo":
                     tradutor = tradutor + '8'
                 elif letra in "Pp":
-                    tradutor = tradutor + '!'
+                    tradutor = tradutor + '{'
                 elif letra in "Qq":
-                    tradutor = tradutor + '?'
+                    tradutor = tradutor + '|'
                 elif letra in "Rr":
-                    tradutor = tradutor + '^'
+                    tradutor = tradutor + '}'
                 elif letra in "Ss":
-                    tradutor = tradutor + '~'
+                    tradutor = tradutor + ';'
                 elif letra in "Tt":
                     tradutor = tradutor + '<'
                 elif letra in "Uu":
