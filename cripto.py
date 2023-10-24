@@ -1,5 +1,6 @@
-from PyQt5 import uic, QtWidgets, QtGui
-import segno
+from PyQt5 import uic, QtWidgets
+import clipboard as c
+
 
 def cripto(frase):
     tradutor = ""
@@ -35,13 +36,13 @@ def cripto(frase):
         elif letra in "Oo":
             tradutor = tradutor + '8'
         elif letra in "Pp":
-            tradutor = tradutor + '!'
+            tradutor = tradutor + '{'
         elif letra in "Qq":
-            tradutor = tradutor + '?'
+            tradutor = tradutor + '|'
         elif letra in "Rr":
-            tradutor = tradutor + '^'
+            tradutor = tradutor + '}'
         elif letra in "Ss":
-            tradutor = tradutor + '~'
+            tradutor = tradutor + ';'
         elif letra in "Tt":
             tradutor = tradutor + '<'
         elif letra in "Uu":
@@ -63,23 +64,22 @@ def cripto(frase):
     return tradutor
 
 def showText():
-    name = tela.lineEdit_2.text()
     textLine = cripto(tela.lineEdit.text())
-    QrcodeText = cripto(tela.lineEdit.text())
-    qrcode_seq = segno.make_sequence(QrcodeText, version=1)
-    qrcode_seq.save('images/{}.png' .format(name), scale=6)
-    tela.resultado.setText(textLine)    
+    tela.resultado.setText(textLine)
+    tela.resultado_2.setText("")
+    
+    return textLine
 
-def codeImage():
-    ##arquivo = 'images/{}.png'.format(tela.lineEdit.text())
-    name = tela.lineEdit_2.text()
-    tela.label_3.setStyleSheet("background-image : url(images/{}.png);".format(name))
+def copyText():
+    textCopied = showText()
+    c.copy(textCopied)
+    tela.resultado_2.setText("Copiado!")
 
 
 app = QtWidgets.QApplication([])
-tela = uic.loadUi('tela01.ui')
+tela = uic.loadUi("./tela01.ui")
 tela.criptoButton.clicked.connect(showText)
-tela.qrcodeButton_2.clicked.connect(codeImage)
+tela.pasteButton.clicked.connect(copyText)
 
 tela.show()
 app.exec()

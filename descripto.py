@@ -1,7 +1,6 @@
-print('='*50)
-print(' ')
-print(' Olá, Seja bem vindo ao DesCriptoMessage  \n Use o para Descriptografar suas mensagens')
-print(' ')
+from PyQt5 import uic, QtWidgets, QtGui
+import clipboard as c
+
 
 def descripto(frase):
     tradutor = ""
@@ -64,9 +63,26 @@ def descripto(frase):
             tradutor = tradutor + letra
     return tradutor
 
-result = descripto(input(" Digite a frase Criptografada e a descubra: "))
-print(' ')
-print(' A frase era: ' +  result )
-print(' ')
-print('='*50)
-print(input('Pressione Enter para sair...'))
+def showText():
+    textLine = descripto(TelaDes.fraseDes.text())
+    TelaDes.resultadoDes.setText(textLine)
+    TelaDes.resultado_2Des.setText("")
+    
+    return textLine
+
+def copyText():
+    textCopied = showText()
+    c.copy(textCopied)
+    TelaDes.resultado_2Des.setText("Copiado!")
+
+
+app = QtWidgets.QApplication([])
+
+
+TelaDes = uic.loadUi("tela02.ui")
+
+TelaDes.DescriptoButton.clicked.connect(showText)
+TelaDes.pasteButton2.clicked.connect(copyText)
+
+TelaDes.show()
+app.exec()
