@@ -1,7 +1,6 @@
 from PyQt5 import uic, QtWidgets
 import clipboard as c
 
-
 def cripto(frase):
     tradutor = ""
     for letra in frase:

@@ -20,19 +20,27 @@
    <widget class="QPushButton" name="criptoButton">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>350</y>
+      <x>170</x>
+      <y>310</y>
       <width>301</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>14</pointsize>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #222; background-color: #d2d2d2</string>
+     <string notr="true">border-style: solid;
+background-color: rgb(85, 85, 127);
+color: rgb(255, 255, 255);
+padding: 5px;
+border-width: 2px;
+border-color: #fff;
+border-radius: 10px;</string>
     </property>
     <property name="text">
      <string>Gerar Criptografia</string>
@@ -47,19 +55,24 @@
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>280</y>
+      <x>170</x>
+      <y>250</y>
       <width>301</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>14</pointsize>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #fff; padding: 5px;</string>
+     <string notr="true">border-style: solid;
+color: rgb(255, 255, 255);
+padding: 5px;
+border-width: 1px;
+border-color: #fff;
+border-radius: 10px;</string>
     </property>
     <property name="text">
      <string/>
@@ -68,19 +81,20 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>240</y>
+      <x>170</x>
+      <y>220</y>
       <width>301</width>
-      <height>31</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>14</pointsize>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #222; background-color: #d2d2d2; text-align: 'center';</string>
+     <string notr="true">color: #fff; 
+text-align: 'center';</string>
     </property>
     <property name="text">
      <string>Digite a frase a ser criptografada:</string>
@@ -92,10 +106,10 @@
    <widget class="QLabel" name="resultado">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>420</y>
-      <width>441</width>
-      <height>81</height>
+      <x>120</x>
+      <y>370</y>
+      <width>401</width>
+      <height>131</height>
      </rect>
     </property>
     <property name="font">
@@ -104,7 +118,11 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #fff; padding: 10px;</string>
+     <string notr="true">color: #fff; padding: 5px;
+border-style: solid;
+border-width: 1px;
+border-color: #fff;
+border-radius: 5px;</string>
     </property>
     <property name="text">
      <string/>
@@ -125,19 +143,24 @@
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>170</y>
+      <x>170</x>
+      <y>160</y>
       <width>301</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>14</pointsize>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #fff; padding: 5px;</string>
+     <string notr="true">border-style: solid;
+color: rgb(255, 255, 255);
+padding: 5px;
+border-width: 1px;
+border-color: #fff;
+border-radius: 10px;</string>
     </property>
     <property name="text">
      <string/>
@@ -146,54 +169,23 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>170</x>
       <y>130</y>
       <width>301</width>
-      <height>31</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>14</pointsize>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #222; background-color: #d2d2d2; text-align: 'center';</string>
+     <string notr="true">color: #fff; 
+text-align: 'center';</string>
     </property>
     <property name="text">
      <string>Digite Seu Nome:</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>20</y>
-      <width>301</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-      <underline>false</underline>
-      <kerning>true</kerning>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: #222; background-color: #d2d2d2; text-align: 'center';</string>
-    </property>
-    <property name="text">
-     <string>SEJA BEM VINDO AO 
- CRIPTO MENSSAGE</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -203,18 +195,25 @@
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>520</y>
-      <width>131</width>
+      <y>510</y>
+      <width>141</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>14</pointsize>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #222; background-color: #d2d2d2</string>
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(85, 85, 127);
+border-style: solid;
+border-width: 1px;
+border-color: #fff;
+border-radius: 10px;</string>
     </property>
     <property name="text">
      <string>Copiar Texto</string>
@@ -229,10 +228,10 @@
    <widget class="QLabel" name="resultado_2">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>560</y>
-      <width>151</width>
-      <height>16</height>
+      <x>250</x>
+      <y>555</y>
+      <width>141</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
@@ -259,6 +258,71 @@ color: rgb(255, 255, 0);</string>
     <property name="wordWrap">
      <bool>true</bool>
     </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>-20</y>
+      <width>411</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 85, 127);
+border-radius: 10px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>30</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>img/criptografado.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>50</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>CRIPTO 
+ MESSAGE</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
